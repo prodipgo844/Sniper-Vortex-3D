@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Central Scope Rim Ring -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M54,24A30,30 0,1 0,54,84A30,30 0,1 0,54,24"
+        android:strokeWidth="2.5"
+        android:strokeColor="#00FF66" />
+
+    <!-- Outer heavy scope brackets -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M54,18v6M54,84v6M18,54h6M84,54h6"
+        android:strokeWidth="3.5"
+        android:strokeColor="#00FF66" />
+
+    <!-- Scope Crosshairs lines -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M30,54h48M54,30v48"
+        android:strokeWidth="1.2"
+        android:strokeColor="#00FF66" />
+
+    <!-- Central red glowing laser dot -->
+    <path
+        android:fillColor="#FF2A55"
+        android:pathData="M54,51.5A2.5,2.5 0,1 0,54,56.5A2.5,2.5 0,1 0,54,51.5" />
+
+    <!-- Golden Bullet Silhouette in lower-right quadrant for extra military sniper flair -->
+    <path
+        android:fillColor="#FFB300"
+        android:pathData="M63,65 L66,62 L74,70 L72,72 L63,65 Z" />
+    <path
+        android:fillColor="#FFB300"
+        android:pathData="M70,72 L72,70 L75,73 L73,75 L70,72 Z" />
+</vector>

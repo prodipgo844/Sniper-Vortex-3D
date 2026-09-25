@@ -1,0 +1,6 @@
+{
+  "name": "Tactical Sniper",
+  "description": "A tactical sniper simulation game with realistic ballistics, wind velocity, gravity drop, breath-holding, Bullet-Time, and deep rifle customization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gunmetal_black"
+    android:gravity="center">
+
+    <!-- Glowing Concentric Crosshair Calibration Target Mockup -->
+    <RelativeLayout
+        android:id="@+id/layout_splash_reticle"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_launcher_foreground" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@color/tactical_green"
+            android:alpha="0.4"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_centerVertical="true"
+            android:background="@color/tactical_green"
+            android:alpha="0.4"/>
+    </RelativeLayout>
+
+    <!-- App Identity -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_splash_reticle"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3D COGNITION OVERLAY INITIALIZED"
+            android:textColor="@color/tactical_amber"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.2"
+            android:fontFamily="monospace"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="SILENT ASSASSIN 3D"
+            android:textColor="@color/tactical_green"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:fontFamily="sans-serif-condensed"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="TACTICAL INTEL CALIBRATION IN PROGRESS..."
+            android:textColor="@color/ghost_gray"
+            android:textSize="9sp"
+            android:fontFamily="monospace"/>
+
+        <!-- Progress Loader Bar -->
+        <ProgressBar
+            android:id="@+id/progress_splash_loader"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="200dp"
+            android:layout_height="6dp"
+            android:layout_marginTop="28dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/tactical_green"
+            android:progressTint="@color/tactical_green"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="POWERED BY OPENGL ES 2.0"
+            android:textColor="@color/ghost_gray"
+            android:textSize="8sp"
+            android:letterSpacing="0.1"
+            android:alpha="0.6"/>
+    </LinearLayout>
+
+</RelativeLayout>

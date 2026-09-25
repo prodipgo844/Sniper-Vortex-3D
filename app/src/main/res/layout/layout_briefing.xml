@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gunmetal_black"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Header back button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_briefing_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/gunmetal_gray"
+            android:src="@android:drawable/ic_menu_revert"
+            android:tint="@color/tactical_green"
+            android:contentDescription="Back" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TACTICAL BRIEFING"
+                android:textColor="@color/tactical_amber"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1"
+                android:fontFamily="monospace"/>
+
+            <TextView
+                android:id="@+id/txt_briefing_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="THE SENTINEL LOOKOUT"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/gunmetal_light" />
+
+    <!-- CRT Console Detail Sheet -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginVertical="16dp"
+        android:background="@color/gunmetal_gray"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_briefing_codename"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OPERATION: EYE IN THE SKY"
+                    android:textColor="@color/tactical_green"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.05"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="COGNITIVE RECON ANALYSIS:"
+                    android:textColor="@color/ghost_gray"
+                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    android:fontFamily="monospace"/>
+
+                <TextView
+                    android:id="@+id/txt_briefing_body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="An enemy insurgent scout is occupying the high tower overlooking our sector. He's relaying scout reports on our convoy. Eliminate him before the convoy passes."
+                    android:textColor="@color/matte_white"
+                    android:textSize="13sp"
+                    android:lineSpacingMultiplier="1.2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="VISUAL TARGET CONFIRMATION:"
+                    android:textColor="@color/ghost_gray"
+                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    android:fontFamily="monospace"/>
+
+                <TextView
+                    android:id="@+id/txt_briefing_target_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Wears a dark red tactical vest. Standing still on the water tower platform."
+                    android:textColor="@color/tactical_amber"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:lineSpacingMultiplier="1.2"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="16dp"
+                    android:background="@color/gunmetal_light" />
+
+                <!-- Grid specs -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DISTANCE TO ZONE"
+                            android:textColor="@color/ghost_gray"
+                            android:textSize="9sp"
+                            android:fontFamily="monospace"/>
+
+                        <TextView
+                            android:id="@+id/txt_briefing_distance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="320 Meters"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ESTIMATED WIND"
+                            android:textColor="@color/ghost_gray"
+                            android:textSize="9sp"
+                            android:fontFamily="monospace"/>
+
+                        <TextView
+                            android:id="@+id/txt_briefing_wind"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1.5 mph EAST"
+                            android:textColor="@color/tactical_green"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ACTIVE WEAPON"
+                            android:textColor="@color/ghost_gray"
+                            android:textSize="9sp"
+                            android:fontFamily="monospace"/>
+
+                        <TextView
+                            android:id="@+id/txt_briefing_weapon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="M24 Tactical"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="REWARD CREDITS"
+                            android:textColor="@color/ghost_gray"
+                            android:textSize="9sp"
+                            android:fontFamily="monospace"/>
+
+                        <TextView
+                            android:id="@+id/txt_briefing_reward"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$400"
+                            android:textColor="@color/tactical_amber"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- START button -->
+    <Button
+        android:id="@+id/btn_briefing_start"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:backgroundTint="@color/tactical_green"
+        android:text="INFILTRATE &amp; LOCK TARGET"
+        android:textColor="@color/gunmetal_black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.05"
+        android:fontFamily="monospace" />
+
+</LinearLayout>

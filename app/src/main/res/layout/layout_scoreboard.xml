@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gunmetal_black"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Big Outcome Badge wrapper -->
+    <LinearLayout
+        android:id="@+id/layout_scoreboard_badge_bg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/gunmetal_gray"
+        android:gravity="center">
+
+        <!-- Custom big thumbs up / fail symbol -->
+        <TextView
+            android:id="@+id/txt_scoreboard_badge_char"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✓"
+            android:textColor="@color/tactical_green"
+            android:textSize="36sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="DECONSTRUCT ANALYSIS: COMPLETE"
+        android:textColor="@color/ghost_gray"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:letterSpacing="0.1"/>
+
+    <TextView
+        android:id="@+id/txt_scoreboard_outcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="CRITICAL HEADSHOT KILL"
+        android:textColor="@color/tactical_green"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:gravity="center"/>
+
+    <!-- Scorecard details sheet -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="32dp"
+        android:background="@color/gunmetal_gray"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TACTICAL PERFORMANCE BALANCES"
+            android:textColor="@color/ghost_gray"
+            android:textSize="10sp"
+            android:fontFamily="monospace"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="12dp"
+            android:background="@color/gunmetal_light" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MISSION STATUS:"
+                android:textColor="@color/ghost_gray"
+                android:textSize="12sp"
+                android:fontFamily="monospace"/>
+
+            <TextView
+                android:id="@+id/txt_score_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="SUCCESS"
+                android:textColor="@color/tactical_green"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_score_exit"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:backgroundTint="@color/gunmetal_gray"
+            android:text="MISSIONS"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:fontFamily="monospace"/>
+
+        <Button
+            android:id="@+id/btn_score_action"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:backgroundTint="@color/tactical_green"
+            android:text="NEXT LEVEL"
+            android:textColor="@color/gunmetal_black"
+            android:textStyle="bold"
+            android:fontFamily="monospace"/>
+    </LinearLayout>
+
+</LinearLayout>

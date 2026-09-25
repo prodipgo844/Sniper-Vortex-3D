@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <!-- 1. DYNAMIC CENTRAL RETICLE BRACKETS (Visual scope overlay center) -->
+    <RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_centerInParent="true"
+        android:background="@android:color/transparent">
+
+        <!-- Outer tech scope ring -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_launcher_foreground" />
+
+        <!-- Vertical mil-dot crosshair lines -->
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@color/tactical_green"
+            android:alpha="0.7"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_centerVertical="true"
+            android:background="@color/tactical_green"
+            android:alpha="0.7"/>
+
+        <!-- Central crimson glowing laser aiming pointer -->
+        <View
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_centerInParent="true"
+            android:background="@color/laser_crimson" />
+    </RelativeLayout>
+
+    <!-- 2. UPPER HUD TELEMETRY PANEL -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="16dp">
+
+        <!-- Back / Abort Button -->
+        <ImageButton
+            android:id="@+id/btn_game_abort"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:background="@color/gunmetal_gray"
+            android:alpha="0.85"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:tint="@color/white"
+            android:contentDescription="Abort Operation" />
+
+        <!-- Wind speed vector readouts -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/black"
+            android:alpha="0.8"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_game_wind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WIND: 5.0 mph EAST"
+                android:textColor="@color/tactical_green"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.05"/>
+        </LinearLayout>
+
+        <!-- Distance rangefinder meter -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/black"
+            android:alpha="0.8"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_game_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RNG: 250m"
+                android:textColor="@color/tactical_amber"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 3. MIDDLE ALERT BANNER (Combat escape count) -->
+    <LinearLayout
+        android:id="@+id/layout_game_alert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/black"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txt_game_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WARNING: TARGET FLIGHT IN: 5.0s"
+            android:textColor="@color/laser_crimson"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:fontFamily="monospace"/>
+    </LinearLayout>
+
+    <!-- 4. LOWER CONTROLS & HUD MODULES -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp">
+
+        <!-- LOWER LEFT: Breath hold stabilizer sway gauge -->
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BREATH HOLD STABILIZER"
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"/>
+
+            <!-- Stamina bar notch progress -->
+            <ProgressBar
+                android:id="@+id/progress_breath"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="4dp"
+                android:max="100"
+                android:progress="100"
+                android:progressTint="@color/tactical_amber"/>
+
+            <Button
+                android:id="@+id/btn_game_breath"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/gunmetal_gray"
+                android:text="HOLD BREATH"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:fontFamily="monospace"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"/>
+        </LinearLayout>
+
+        <!-- LOWER CENTER: Zoom Magnification Lens controls -->
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_game_zoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ZOOM: 4.0x"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"/>
+
+            <SeekBar
+                android:id="@+id/seekbar_zoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:max="100"
+                android:progress="20"
+                android:thumbTint="@color/tactical_green"
+                android:progressTint="@color/tactical_green"/>
+        </LinearLayout>
+
+        <!-- LOWER RIGHT: Ballistic trigger group -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <!-- Bullet count readout -->
+            <TextView
+                android:id="@+id/txt_game_ammo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AMMO: 5 / 5"
+                android:textColor="@color/tactical_amber"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:layout_marginBottom="6dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/btn_game_reload"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@color/black"
+                    android:alpha="0.8"
+                    android:src="@android:drawable/stat_notify_sync"
+                    android:tint="@color/white"
+                    android:contentDescription="Reload Ammo Clip" />
+
+                <Button
+                    android:id="@+id/btn_game_fire"
+                    android:layout_width="88dp"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="8dp"
+                    android:backgroundTint="@color/laser_crimson"
+                    android:text="FIRE"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:fontFamily="monospace"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- LOADING RELOAD OVERLAY INDICATOR -->
+    <LinearLayout
+        android:id="@+id/layout_reload_overlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/gunmetal_gray"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="12dp"
+        android:visibility="gone"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:indeterminateTint="@color/tactical_green"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="RELOADING..."
+            android:textColor="@color/tactical_green"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:fontFamily="monospace"/>
+    </LinearLayout>
+
+</RelativeLayout>

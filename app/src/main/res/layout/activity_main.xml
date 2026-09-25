@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gunmetal_black"
+    android:padding="24dp">
+
+    <!-- Decorative Concentric Radar Background lines -->
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_centerInParent="true"
+        android:alpha="0.05"
+        android:src="@drawable/ic_launcher_background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- Title Block Card Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gunmetal_gray"
+            android:elevation="4dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3D TACTICAL COGNITION"
+                android:textColor="@color/tactical_amber"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SILENT ASSASSIN 3D"
+                android:textColor="@color/tactical_green"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1"
+                android:fontFamily="sans-serif-condensed"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="V2.05 OPENGL ES 3D GRAPHICS RENDERER"
+                android:textColor="@color/ghost_gray"
+                android:textSize="9sp"/>
+        </LinearLayout>
+
+        <!-- Clean Spacer layout, no operative funds displayed -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <!-- ENVIRONMENT SELECTOR SUBPANEL -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="SELECT 3D THEATER OF OPERATIONS:"
+            android:textColor="@color/tactical_amber"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_select_jungle"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:backgroundTint="@color/tactical_green"
+                android:text="DENSE JUNGLE"
+                android:textColor="@color/gunmetal_black"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btn_select_indoor"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:backgroundTint="@color/gunmetal_gray"
+                android:text="INDOOR HOME"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- MODE SELECTOR SUBPANEL -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="SELECT OPERATION MODE:"
+            android:textColor="@color/tactical_amber"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_select_practice"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:backgroundTint="@color/tactical_green"
+                android:text="PRACTICE DUMMY"
+                android:textColor="@color/gunmetal_black"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btn_select_combat"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:backgroundTint="@color/gunmetal_gray"
+                android:text="COMBAT SOLDIER"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Action Trigger Buttons -->
+        <Button
+            android:id="@+id/btn_menu_campaign"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/tactical_green"
+            android:text="START 3D OPERATION"
+            android:textColor="@color/gunmetal_black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:fontFamily="monospace"/>
+
+        <Button
+            android:id="@+id/btn_menu_armory"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/gunmetal_gray"
+            android:textColor="@color/tactical_green"
+            android:text="TACTICAL ARMORY"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:fontFamily="monospace" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="OPERATIONAL SECURITY SECURED // OPENGL ES 2.0 RUNNING"
+            android:textColor="@color/ghost_gray"
+            android:textSize="8sp"/>
+    </LinearLayout>
+
+</RelativeLayout>
